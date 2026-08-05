@@ -3,141 +3,252 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dhanush V | Developer Portfolio</title>
+    <title>Dhanush V | Portfolio</title>
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
-    <!-- FontAwesome & Google Fonts -->
+    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Library for Scroll Animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
 
-    <!-- Background Glow Effect -->
-    <div class="gradient-bg"></div>
-
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">DHANUSH<span>.V</span></div>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
+    <!-- Header / Navbar -->
+    <nav class="navbar">
+        <div class="logo">Dhanush <span>V</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#summary">Summary</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#interests">Interests & Strengths</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Hero Section with Profile Image -->
-    <section class="hero">
-        <div class="hero-container">
-            <!-- Left Text Content -->
+    <!-- 1. Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-container" data-aos="fade-up">
+            <!-- Profile Picture -->
+            <div class="profile-img-container">
+                <img src="Profile.JPEG.jpeg" alt="Dhanush V" class="profile-img">
+            </div>
+            
             <div class="hero-content">
-                <p class="greeting">Welcome to my universe</p>
-                <h1>Hi, I'm <span class="text-gradient">Dhanush V</span></h1>
-                <p class="sub-title">Software Engineering Aspirant | Java</p>
-                <p class="tagline">"Turning complex logic into simple code"</p>
+                <span class="welcome-tag">Welcome to My Universe</span>
+                <h1>Hi, I'm <span class="highlight">Dhanush V</span></h1>
+                <h2>I am a Software Engineering Aspirant / Java</h2>
+                <p class="hero-quote">"Tuning complex logic into simple code."</p>
                 
-                <div class="social-links">
-                    <a href="https://github.com/vdhanush1010" target="_blank"><i class="fab fa-github"></i></a>
+                <div class="social-icons">
                     <a href="https://www.linkedin.com/in/dhanush-v-0a3a70330" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:vdhanush2005123@gmail.com"><i class="fas fa-envelope"></i></a>
-                    <a href="tel:+919025114185"><i class="fas fa-phone"></i></a>
+                    <a href="https://leetcode.com/u/TQlxma1QUO/" target="_blank"><i class="fas fa-code"></i></a>
+                    <a href="https://github.com/vdhanush1010" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="mailto:dhanush10official@gmail.com"><i class="fas fa-envelope"></i></a>
                 </div>
 
                 <div class="hero-btns">
-                    <a href="#contact" class="btn btn-primary">Connect With Me</a>
+                    <a href="#projects" class="btn primary-btn">View Projects</a>
+                    <a href="https://drive.google.com/drive/folders/1nnuD5PS4hIf9LIRnrrCn499UHyR9URkE?usp=sharing" target="_blank" class="btn secondary-btn">
+                        <i class="fas fa-file-download"></i> Download Resume
+                    </a>
                 </div>
-            </div>
-
-            <!-- Right Circle Profile Image -->
-            <div class="hero-image-container">
-                <div class="img-glow"></div>
-                <img src="https://github.com/vdhanush1010/my-portfolio/blob/main/Profile.jpeg?raw=true" alt="Dhanush V" class="profile-img">
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section glass-card">
-        <h2 class="section-title">Career Objective</h2>
-        <p class="about-text">Forward-thinking Computer Science Engineering student with strong core programming capabilities in Java, combined with practical expertise in AI tools and prompt engineering. Seeking an entry-level software role to leverage generative AI workflows, build innovative applications, and contribute effectively to modern tech teams.</p>
+    <!-- 2. Executive Summary Section -->
+    <section id="summary" class="about-section" data-aos="fade-up">
+        <h2 class="section-title">Executive <span>Summary</span></h2>
+        <div class="about-card">
+            <p>Forward-thinking Computer Science Engineer with strong core programming capabilities in Java, combined with practical expertise in AI tools and prompt engineering. Seeking an entry-level software role to leverage generative AI workflows, build innovative applications, and contribute effectively to modern tech teams.</p>
+        </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="section">
+    <!-- 3. Technical Expertise Section -->
+    <section id="skills" class="skills-section" data-aos="fade-up">
+        <h2 class="section-title">Technical <span>Expertise</span></h2>
+        
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Programming Languages</h3>
+                <div class="skill-chips">
+                    <span class="chip"><i class="fab fa-java"></i> Java</span>
+                    <span class="chip"><i class="fas fa-sitemap"></i> Data Structures & Algorithms (DSA)</span>
+                    <span class="chip"><i class="fas fa-cubes"></i> OOPs</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Web Technologies</h3>
+                <div class="skill-chips">
+                    <span class="chip"><i class="fab fa-html5"></i> HTML</span>
+                    <span class="chip"><i class="fab fa-css3-alt"></i> CSS</span>
+                    <span class="chip"><i class="fab fa-react"></i> React.js</span>
+                    <span class="chip"><i class="fas fa-leaf"></i> Spring Boot</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Database Systems</h3>
+                <div class="skill-chips">
+                    <span class="chip"><i class="fas fa-database"></i> MongoDB</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Developer Tools</h3>
+                <div class="skill-chips">
+                    <span class="chip"><i class="fas fa-code"></i> IntelliJ IDEA</span>
+                    <span class="chip"><i class="fas fa-terminal"></i> VS Code</span>
+                    <span class="chip"><i class="fab fa-git-alt"></i> Git</span>
+                    <span class="chip"><i class="fab fa-github"></i> GitHub</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Projects Section -->
+    <section id="projects" class="projects-section" data-aos="fade-up">
+        <h2 class="section-title">Featured <span>Projects</span></h2>
+        
+        <div class="projects-grid">
+            <div class="project-card" data-aos="zoom-in">
+                <h3>Personal Developer Portfolio Website</h3>
+                <p>Designed and deployed a modern, responsive developer portfolio utilizing HTML, CSS, and JavaScript. Integrated glassmorphic design elements, smooth scroll animations, and dynamic routing to highlight core technical skills, academic projects, and social profiles. Hosted live via GitHub Pages.</p>
+                <div class="card-tags">
+                    <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                </div>
+                <a href="https://vdhanush1010.github.io/my-portfolio/" target="_blank" class="project-btn">
+                    <i class="fas fa-external-link-alt"></i> Link to Demo
+                </a>
+            </div>
+
+            <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+                <h3>SmartSchedule: College Timetable Management System</h3>
+                <p>Engineered an automated scheduling system in Java backed by MongoDB for storing faculty and room data. Implemented core algorithmic logic to prevent faculty slot overlaps, streamline period distribution, and efficiently manage dynamic daily class timetables.</p>
+                <div class="card-tags">
+                    <span>Java</span><span>MongoDB</span><span>Algorithms</span>
+                </div>
+                <a href="https://drive.google.com/file/d/1McIyjt6Y0ppv0rxGhzXOnOhhE94HHuL0/view?usp=sharing" target="_blank" class="project-btn">
+                    <i class="fas fa-play"></i> Link to Demo
+                </a>
+            </div>
+
+            <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+                <h3>Classic Snake Game</h3>
+                <p>Developed a terminal-driven Snake game in Java focusing on clean code architecture and efficient logic. Utilized custom data structures for coordinate tracking, implemented real-time keyboard input parsing, and created a dynamic score-rendering engine within the console.</p>
+                <div class="card-tags">
+                    <span>Java</span><span>DSA</span><span>CLI</span>
+                </div>
+                <a href="https://drive.google.com/file/d/1SoSdHSqHyb0iPdckzlP1bBOxUnIYzAhE/view?usp=sharing" target="_blank" class="project-btn">
+                    <i class="fas fa-play"></i> Link to Demo
+                </a>
+            </div>
+
+            <div class="project-card" data-aos="zoom-in" data-aos-delay="300">
+                <h3>Employee Management System (Terminal-Based)</h3>
+                <p>Built a robust Command Line Interface (CLI) application in Java adopting modular Object-Oriented Design principles. Enabled full CRUD functionality for persistent record maintenance, input validation, and structured console display to streamline employee record management.</p>
+                <div class="card-tags">
+                    <span>Java</span><span>OOPs</span><span>CRUD</span>
+                </div>
+                <a href="https://drive.google.com/file/d/1czw90WcYbQZQx_zSEQkruofQSJ9C2A1K/view?usp=sharing" target="_blank" class="project-btn">
+                    <i class="fas fa-play"></i> Link to Demo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Education Section -->
+    <section id="education" class="education-section" data-aos="fade-up">
         <h2 class="section-title">Education</h2>
-        <div class="card-container">
-            <div class="card glass-card">
-                <div class="card-badge">2023 – 2027</div>
-                <h3>B.E. Computer Science & Engineering</h3>
-                <p class="college">CMS College of Engineering</p>
-                <div class="score">CGPA: <span>8.17</span></div>
-            </div>
-            <div class="card glass-card">
-                <div class="card-badge">2023</div>
-                <h3>Class 12th (HSC)</h3>
-                <p class="college">Tamil Nadu State Board</p>
-                <div class="score">Score: <span>78%</span></div>
+        <div class="education-grid">
+            <div class="education-card">
+                <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+                <h3>B.E. Computer Science and Engineering</h3>
+                <p class="edu-place">CMS College of Engineering</p>
+                <span class="edu-year">2023 -- 2027</span>
+                <div class="edu-score">CGPA: <span>8.17</span></div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-        <h2 class="section-title">Technical Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-card glass-card">
-                <i class="fab fa-java skill-icon"></i>
-                <h3>Programming</h3>
-                <p>Java</p>
-            </div>
-            <div class="skill-card glass-card">
-                <i class="fas fa-code skill-icon"></i>
-                <h3>Web Tech</h3>
-                <p>HTML5, React</p>
-            </div>
-            <div class="skill-card glass-card">
-                <i class="fas fa-database skill-icon"></i>
-                <h3>Databases</h3>
-                <p>MongoDB</p>
-            </div>
-            <div class="skill-card glass-card">
-                <i class="fas fa-brain skill-icon"></i>
-                <h3>AI & Dev Tools</h3>
-                <p>Prompt Engineering, Generative AI, Git, VS Code</p>
+    <!-- 6. Certifications & Honors Section -->
+    <section id="certifications" class="certifications-section" data-aos="fade-up">
+        <h2 class="section-title">Certifications & <span>Honors</span></h2>
+        
+        <div class="cert-grid">
+            <div class="cert-card">
+                <div class="cert-icon"><i class="fas fa-folder-open"></i></div>
+                <h3>Certifications & Honors</h3>
+                <p>Includes NPTEL Machine Learning, Google Cloud Cybersecurity & Data Analytics Certificate, Inter-College Hackathon, and Technical Paper Presentation.</p>
+                <a href="https://drive.google.com/drive/folders/1zixlo4wF6TVoXQmYN-HWPr3JCNL_goYz?usp=sharing" target="_blank" class="cert-btn">
+                    <i class="fas fa-external-link-alt"></i> Access Certificates Folder
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <h2 class="section-title">Featured Project</h2>
-        <div class="project-card glass-card">
-            <div class="project-info">
-                <h3>SmartSchedule: Automated College Timetable & Faculty Management System</h3>
-                <p>Built an automated timetable allocation system using <strong>Java</strong> and <strong>MongoDB</strong>. It prevents faculty slot clashes, manages class timings, and optimizes resources efficiently.</p>
-                <div class="tech-tags">
-                    <span>Java</span>
-                    <span>MongoDB</span>
-                    <span>Automation</span>
+    <!-- 7. Professional Interests & Key Strengths Section -->
+    <section id="interests" class="interests-section" data-aos="fade-up">
+        <h2 class="section-title">Professional <span>Interests & Key Strengths</span></h2>
+        
+        <div class="interests-grid">
+            <div class="interest-card">
+                <h3><i class="fas fa-laptop-code"></i> Professional Interests</h3>
+                <div class="chip-container">
+                    <span class="chip-item">Software Development & Engineering</span>
+                    <span class="chip-item">Project Management</span>
+                    <span class="chip-item">Technical Solutions & Support</span>
+                    <span class="chip-item">Web Application Development</span>
+                    <span class="chip-item">Database Management Systems</span>
+                </div>
+            </div>
+
+            <div class="interest-card">
+                <h3><i class="fas fa-user-check"></i> Key Strengths</h3>
+                <div class="chip-container">
+                    <span class="chip-item">Problem Solving</span>
+                    <span class="chip-item">Communication</span>
+                    <span class="chip-item">Analytical Thinking</span>
+                    <span class="chip-item">Teamwork</span>
+                    <span class="chip-item">Quick Learner</span>
+                    <span class="chip-item">Prompt Engineering</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section glass-card contact-section">
-        <h2 class="section-title">Let's Connect</h2>
-        <div class="contact-details">
-            <div class="contact-item"><i class="fas fa-map-marker-alt"></i> Krishnagiri, Tamil Nadu</div>
-            <div class="contact-item"><i class="fas fa-envelope"></i> vdhanush2005123@gmail.com</div>
-            <div class="contact-item"><i class="fas fa-phone"></i> +91 9025114185</div>
+    <!-- 8. Let's Connect / Contact Section -->
+    <section id="contact" class="contact-section" data-aos="fade-up">
+        <h2 class="section-title">Let's <span>Connect</span></h2>
+        <div class="contact-container">
+            <p>Feel free to reach out for opportunities, collaborations, or just a friendly chat!</p>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>dhanush10official@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 9025114185</span>
+                </div>
+            </div>
+            <a href="mailto:dhanush10official@gmail.com" class="btn primary-btn margin-top-btn">Send Message</a>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Dhanush V. Crafted with passion & AI innovation.</p>
+        <p>&copy; 2026 Dhanush V. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
 </body>
 </html>
