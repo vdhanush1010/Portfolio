@@ -95,8 +95,8 @@ body {
 /* Profile Image - Rectangular Card Style */
 .profile-img-container {
     width: 240px;
-    height: 320px; /* Portrait Ratio - இமேஜ் முழுசா தெரிய */
-    border-radius: 16px; /* லேசான வளைவு கொண்ட Modern Frame */
+    height: 320px;
+    border-radius: 16px;
     padding: 4px;
     background: linear-gradient(135deg, var(--primary-green), var(--primary-blue));
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(34, 139, 34, 0.3);
@@ -135,11 +135,6 @@ body {
 
 .highlight {
     color: var(--primary-green);
-}
-
-.typing-text {
-    color: var(--primary-blue);
-    border-right: 2px solid var(--primary-blue);
 }
 
 .hero-quote {
@@ -274,16 +269,6 @@ body {
     box-shadow: 0 10px 25px rgba(34, 139, 34, 0.25);
 }
 
-.cert-card {
-    text-align: center;
-}
-
-.cert-icon {
-    font-size: 2.2rem;
-    color: var(--primary-green);
-    margin-bottom: 12px;
-}
-
 .card-tags {
     margin: 15px 0;
 }
@@ -295,11 +280,16 @@ body {
     padding: 3px 8px;
     border-radius: 4px;
     margin-right: 5px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.project-links {
+    margin-top: 15px;
 }
 
 .project-btn, .cert-btn {
     display: inline-block;
-    margin-top: 15px;
     padding: 8px 18px;
     color: var(--primary-blue);
     border: 1px solid var(--primary-blue);
@@ -367,6 +357,32 @@ body {
 .edu-score span {
     color: var(--primary-green);
     font-weight: 700;
+}
+
+/* Certifications Section */
+.cert-card {
+    text-align: center;
+}
+
+.cert-icon {
+    font-size: 2.2rem;
+    color: var(--primary-green);
+    margin-bottom: 12px;
+}
+
+.cert-list {
+    text-align: left;
+    display: inline-block;
+    margin: 20px auto;
+    padding-left: 20px;
+    list-style-position: inside;
+}
+
+.cert-list li {
+    margin-bottom: 12px;
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
 /* Professional Interests & Strengths Section */
@@ -459,23 +475,4 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     color: #94a3b8;
     font-size: 0.85rem;
-}
-/* Certifications Card Inner Alignment Fix */
-.cert-card {
-    text-align: center; /* Title & Button Center */
-}
-
-.cert-list {
-    text-align: left; /* Text Left Align */
-    display: inline-block; /* Center the list block as a whole */
-    margin: 20px auto;
-    padding-left: 20px;
-    list-style-position: inside; /* Keeps bullet points attached to text */
-}
-
-.cert-list li {
-    margin-bottom: 12px;
-    color: #cbd5e1;
-    font-size: 0.95rem;
-    line-height: 1.6;
 }

@@ -1,10 +1,21 @@
+// Initialize AOS Library
+document.addEventListener("DOMContentLoaded", () => {
+    AOS.init({ 
+        duration: 1000, 
+        once: true 
+    });
+});
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+        const targetElement = document.querySelector(this.getAttribute('href'));
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
     });
 });
 
@@ -20,7 +31,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-document.querySelectorAll('.section').forEach(section => {
+document.querySelectorAll('section').forEach(section => {
     section.style.opacity = "0";
     section.style.transform = "translateY(30px)";
     section.style.transition = "all 0.6s ease-out";
