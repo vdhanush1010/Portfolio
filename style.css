@@ -92,7 +92,7 @@ body {
     text-align: center;
 }
 
-/* Profile Image - Rectangular Card Style */
+/* Profile Image */
 .profile-img-container {
     width: 240px;
     height: 320px;
@@ -289,7 +289,8 @@ body {
 }
 
 .project-btn, .cert-btn {
-    display: inline-block;
+    display: table;
+    margin: 20px auto 0;
     padding: 8px 18px;
     color: var(--primary-blue);
     border: 1px solid var(--primary-blue);
@@ -299,20 +300,26 @@ body {
     transition: 0.3s;
 }
 
+.project-btn {
+    margin: 15px 0 0 0;
+    display: inline-block;
+}
+
 .project-btn:hover, .cert-btn:hover {
     background: var(--primary-blue);
     color: #fff;
 }
 
-/* Education Section */
+/* Education Section Multi-card */
 .education-section {
     padding: 60px 8%;
 }
 
-.education-grid {
-    display: flex;
-    justify-content: center;
-    max-width: 600px;
+.education-grid-multi {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
@@ -322,7 +329,6 @@ body {
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.08);
     transition: 0.3s;
-    width: 100%;
     text-align: center;
 }
 
@@ -338,25 +344,30 @@ body {
 }
 
 .education-card h3 {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     margin-bottom: 5px;
 }
 
 .edu-place {
     color: #cbd5e1;
     font-size: 0.95rem;
+    margin-bottom: 8px;
+}
+
+.edu-score {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.edu-score span {
+    color: var(--primary-green);
+    font-weight: 700;
 }
 
 .edu-year {
     display: inline-block;
     font-size: 0.85rem;
     color: var(--primary-blue);
-    margin: 8px 0;
-}
-
-.edu-score span {
-    color: var(--primary-green);
-    font-weight: 700;
 }
 
 /* Certifications Section */
