@@ -1,8 +1,64 @@
-// Initialize AOS Library
+// Initialize AOS Library for scroll animations
 document.addEventListener("DOMContentLoaded", () => {
     AOS.init({ 
         duration: 1000, 
         once: true 
+    });
+
+    // 1. Initialize 3D Coverflow Swiper for Projects
+    const projectsSwiper = new Swiper('.projects-swiper', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        initialSlide: 0,
+        loop: true,
+        coverflowEffect: {
+            rotate: 20,       // Angle of side cards
+            stretch: 0,
+            depth: 250,       // Pushes background cards back
+            modifier: 1,
+            slideShadows: true // Elegant dark depth shadow for background cards
+        },
+        pagination: {
+            el: '.projects-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.projects-next',
+            prevEl: '.projects-prev',
+        },
+        keyboard: {
+            enabled: true,
+        }
+    });
+
+    // 2. Initialize 3D Coverflow Swiper for Education
+    const educationSwiper = new Swiper('.education-swiper', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        initialSlide: 0,
+        loop: false,
+        coverflowEffect: {
+            rotate: 20,
+            stretch: 0,
+            depth: 220,
+            modifier: 1,
+            slideShadows: true
+        },
+        pagination: {
+            el: '.education-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.education-next',
+            prevEl: '.education-prev',
+        },
+        keyboard: {
+            enabled: true,
+        }
     });
 });
 
@@ -17,23 +73,4 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
         }
     });
-});
-
-// Scroll Reveal Effect for Sections
-const observerOptions = { threshold: 0.15 };
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
-        }
-    });
-}, observerOptions);
-
-document.querySelectorAll('section').forEach(section => {
-    section.style.opacity = "0";
-    section.style.transform = "translateY(30px)";
-    section.style.transition = "all 0.6s ease-out";
-    observer.observe(section);
 });

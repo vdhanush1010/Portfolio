@@ -19,7 +19,7 @@ body {
     --primary-green: #228b22;
     --primary-blue: #0066cc;
     --dark-bg: #0f172a;
-    --card-bg: rgba(30, 41, 59, 0.7);
+    --card-bg: rgba(30, 41, 59, 0.85);
 }
 
 /* Navbar */
@@ -28,7 +28,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 8%;
-    background: rgba(15, 23, 42, 0.9);
+    background: rgba(15, 23, 42, 0.95);
     position: fixed;
     width: 100%;
     top: 0;
@@ -67,11 +67,23 @@ body {
 .section-title {
     text-align: center;
     font-size: 2.2rem;
-    margin-bottom: 30px;
+    margin-bottom: 8px;
 }
 
 .section-title span {
     color: var(--primary-green);
+}
+
+.swipe-hint {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 0.88rem;
+    margin-bottom: 25px;
+}
+
+.swipe-hint i {
+    color: var(--primary-green);
+    margin-right: 5px;
 }
 
 /* Hero Section */
@@ -92,7 +104,6 @@ body {
     text-align: center;
 }
 
-/* Profile Image */
 .profile-img-container {
     width: 240px;
     height: 320px;
@@ -243,30 +254,43 @@ body {
     transform: scale(1.05);
 }
 
-/* Projects Section */
-.projects-section, .certifications-section {
+/* =======================================================
+   3D Swiper Coverflow Slider (Projects & Education)
+   ======================================================= */
+.projects-section, .education-section {
     padding: 60px 8%;
+    position: relative;
 }
 
-.projects-grid, .cert-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+.projects-swiper, .education-swiper {
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 55px;
+    overflow: hidden;
 }
 
-.project-card, .cert-card {
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 330px !important;
+    max-width: 90vw;
+    border-radius: 16px;
+    transition: all 0.4s ease;
+}
+
+/* Project Card Inside Swiper */
+.project-card {
     background: var(--card-bg);
     padding: 30px;
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    transition: 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     text-align: left;
-}
-
-.project-card:hover, .cert-card:hover {
-    transform: translateY(-8px);
-    border-color: var(--primary-green);
-    box-shadow: 0 10px 25px rgba(34, 139, 34, 0.25);
+    user-select: none;
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card-tags {
@@ -285,12 +309,11 @@ body {
 }
 
 .project-links {
-    margin-top: 15px;
+    margin-top: auto;
 }
 
-.project-btn, .cert-btn {
-    display: table;
-    margin: 20px auto 0;
+.project-btn {
+    display: inline-block;
     padding: 8px 18px;
     color: var(--primary-blue);
     border: 1px solid var(--primary-blue);
@@ -300,52 +323,35 @@ body {
     transition: 0.3s;
 }
 
-.project-btn {
-    margin: 15px 0 0 0;
-    display: inline-block;
-}
-
-.project-btn:hover, .cert-btn:hover {
+.project-btn:hover {
     background: var(--primary-blue);
     color: #fff;
 }
 
-/* Education Section Multi-card */
-.education-section {
-    padding: 60px 8%;
-}
-
-.education-grid-multi {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
+/* Education Card Inside Swiper */
 .education-card {
     background: var(--card-bg);
-    padding: 30px;
+    padding: 35px 25px;
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    transition: 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     text-align: center;
-}
-
-.education-card:hover {
-    border-color: var(--primary-green);
-    transform: translateY(-5px);
+    user-select: none;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .edu-icon {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     color: var(--primary-green);
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .education-card h3 {
     font-size: 1.15rem;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
 .edu-place {
@@ -355,8 +361,8 @@ body {
 }
 
 .edu-score {
-    font-size: 1rem;
-    margin-bottom: 5px;
+    font-size: 1.05rem;
+    margin-bottom: 6px;
 }
 
 .edu-score span {
@@ -365,14 +371,78 @@ body {
 }
 
 .edu-year {
-    display: inline-block;
-    font-size: 0.85rem;
+    font-size: 0.88rem;
     color: var(--primary-blue);
 }
 
-/* Certifications Section */
+/* Active Highlight for Front/Focused Card */
+.swiper-slide-active {
+    border-color: var(--primary-green) !important;
+    box-shadow: 0 15px 35px rgba(34, 139, 34, 0.3) !important;
+}
+
+/* Customizing Swiper Navigation Arrows */
+.swiper-button-next, .swiper-button-prev {
+    color: var(--primary-green) !important;
+    width: 40px;
+    height: 40px;
+    background: rgba(15, 23, 42, 0.8);
+    border-radius: 50%;
+    border: 1px solid rgba(34, 139, 34, 0.4);
+    transition: 0.3s;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 1rem !important;
+    font-weight: bold;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    background: var(--primary-green);
+    color: #fff !important;
+}
+
+/* Customizing Swiper Dots Pagination */
+.swiper-pagination-bullet {
+    background: #64748b !important;
+    opacity: 0.6;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--primary-green) !important;
+    opacity: 1;
+    width: 22px;
+    border-radius: 8px;
+    transition: width 0.3s ease;
+}
+
+/* =======================================================
+   Certifications Section
+   ======================================================= */
+.certifications-section {
+    padding: 60px 8%;
+}
+
+.cert-grid {
+    display: flex;
+    justify-content: center;
+}
+
 .cert-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: 0.4s ease;
     text-align: center;
+    max-width: 750px;
+    width: 100%;
+}
+
+.cert-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary-green);
+    box-shadow: 0 10px 25px rgba(34, 139, 34, 0.25);
 }
 
 .cert-icon {
@@ -394,6 +464,23 @@ body {
     color: #cbd5e1;
     font-size: 0.95rem;
     line-height: 1.6;
+}
+
+.cert-btn {
+    display: table;
+    margin: 20px auto 0;
+    padding: 8px 18px;
+    color: var(--primary-blue);
+    border: 1px solid var(--primary-blue);
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+
+.cert-btn:hover {
+    background: var(--primary-blue);
+    color: #fff;
 }
 
 /* Professional Interests & Strengths Section */
@@ -486,4 +573,14 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     color: #94a3b8;
     font-size: 0.85rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .swiper-slide {
+        width: 290px !important;
+    }
+    .swiper-button-next, .swiper-button-prev {
+        display: none; /* Hide side arrows on small mobile to avoid blocking content */
+    }
 }

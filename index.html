@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dhanush V | Portfolio</title>
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css">
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- AOS Library for Scroll Animations -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Swiper CSS (For 3D Coverflow Slider) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -31,7 +33,6 @@
     <!-- 1. Hero Section -->
     <section id="home" class="hero-section">
         <div class="hero-container" data-aos="fade-up">
-            <!-- Profile Picture -->
             <div class="profile-img-container">
                 <img src="Profile.JPEG.jpeg" alt="Dhanush V" class="profile-img">
             </div>
@@ -116,99 +117,120 @@
         </div>
     </section>
 
-    <!-- 4. Projects Section -->
+    <!-- 4. Projects Section (3D Coverflow Slider) -->
     <section id="projects" class="projects-section" data-aos="fade-up">
         <h2 class="section-title">Featured <span>Projects</span></h2>
+        <p class="swipe-hint"><i class="fas fa-arrows-alt-h"></i> Swipe left or right to explore</p>
         
-        <div class="projects-grid">
-            <!-- 1. Digital Canteen Management System -->
-            <div class="project-card" data-aos="zoom-in">
-                <h3>Digital Canteen Management System</h3>
-                <p>Developed a digital campus ordering platform approved for college deployment; architected relational schemas and automated digital order pipelines, cutting peak lunch hour queue wait times by 40%.</p>
-                <div class="card-tags">
-                    <span>Supabase</span><span>PostgreSQL</span><span>Role-Based Access</span>
+        <!-- Swiper Container for Projects -->
+        <div class="swiper projects-swiper">
+            <div class="swiper-wrapper">
+                
+                <!-- Slide 1: Digital Canteen -->
+                <div class="swiper-slide project-card">
+                    <h3>Digital Canteen Management System</h3>
+                    <p>Developed a digital campus ordering platform approved for college deployment; architected relational schemas and automated digital order pipelines, cutting peak lunch hour queue wait times by 40%.</p>
+                    <div class="card-tags">
+                        <span>Supabase</span><span>PostgreSQL</span><span>Role-Based Access</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://drive.google.com/file/d/1ULx__1g1bU29bR2ICJHM-WQoIw5fjMzE/view?usp=sharing" target="_blank" class="project-btn">
+                            <i class="fas fa-play-circle"></i> Watch Demo
+                        </a>
+                    </div>
                 </div>
-                <div class="project-links">
-                    <a href="https://drive.google.com/file/d/1ULx__1g1bU29bR2ICJHM-WQoIw5fjMzE/view?usp=sharing" target="_blank" class="project-btn">
-                        <i class="fas fa-play-circle"></i> Watch Demo
-                    </a>
-                </div>
-            </div>
 
-            <!-- 2. AI-Powered Complaint Management System -->
-            <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
-                <h3>AI-Powered Complaint Management System</h3>
-                <p>Co-developed a full-stack campus issue-tracking platform; built 10+ RESTful APIs with automated SLA escalation, reducing average ticket resolution turnaround by 35% via AI-based auto-categorization.</p>
-                <div class="card-tags">
-                    <span>Python</span><span>Django</span><span>Supabase</span><span>Gemini API</span>
+                <!-- Slide 2: AI Complaint Management -->
+                <div class="swiper-slide project-card">
+                    <h3>AI-Powered Complaint Management System</h3>
+                    <p>Co-developed a full-stack campus issue-tracking platform; built 10+ RESTful APIs with automated SLA escalation, reducing average ticket resolution turnaround by 35% via AI-based auto-categorization.</p>
+                    <div class="card-tags">
+                        <span>Python</span><span>Django</span><span>Supabase</span><span>Gemini API</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://drive.google.com/file/d/1VjiSINyBy0Sy2_s5pijTlCPJZRfa7xfB/view?usp=sharing" target="_blank" class="project-btn">
+                            <i class="fas fa-play-circle"></i> Watch Demo
+                        </a>
+                    </div>
                 </div>
-                <div class="project-links">
-                    <a href="https://drive.google.com/file/d/1VjiSINyBy0Sy2_s5pijTlCPJZRfa7xfB/view?usp=sharing" target="_blank" class="project-btn">
-                        <i class="fas fa-play-circle"></i> Watch Demo
-                    </a>
-                </div>
-            </div>
 
-            <!-- 3. Personalized Vulnerability Triage System -->
-            <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
-                <h3>Personalized Vulnerability Triage System</h3>
-                <p>Built a local threat prioritization engine in an inter-college hackathon; aggregated CVSS, CISA KEV, and FIRST EPSS feeds to filter 80%+ alert noise into a ranked Top-5 remediation queue.</p>
-                <div class="card-tags">
-                    <span>Python</span><span>Streamlit</span><span>Threat Intel</span><span>EPSS/KEV</span>
+                <!-- Slide 3: Vulnerability Triage -->
+                <div class="swiper-slide project-card">
+                    <h3>Personalized Vulnerability Triage System</h3>
+                    <p>Built a local threat prioritization engine in an inter-college hackathon; aggregated CVSS, CISA KEV, and FIRST EPSS feeds to filter 80%+ alert noise into a ranked Top-5 remediation queue.</p>
+                    <div class="card-tags">
+                        <span>Python</span><span>Streamlit</span><span>Threat Intel</span><span>EPSS/KEV</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://drive.google.com/file/d/1mowVGMiO_e1wIGZf2DutN6fhk6uOUd5d/view?usp=drive_link" target="_blank" class="project-btn">
+                            <i class="fas fa-play-circle"></i> Watch Demo
+                        </a>
+                    </div>
                 </div>
-                <div class="project-links">
-                    <a href="https://drive.google.com/file/d/1mowVGMiO_e1wIGZf2DutN6fhk6uOUd5d/view?usp=drive_link" target="_blank" class="project-btn">
-                        <i class="fas fa-play-circle"></i> Watch Demo
-                    </a>
-                </div>
-            </div>
 
-            <!-- 4. Classic Snake Game -->
-            <div class="project-card" data-aos="zoom-in" data-aos-delay="300">
-                <h3>Classic Snake Game</h3>
-                <p>Created a terminal-based arcade game implementing collision detection and state management logic, using custom coordinate data structures and low-latency console rendering.</p>
-                <div class="card-tags">
-                    <span>Java</span><span>Custom DSA</span><span>CLI</span>
+                <!-- Slide 4: Classic Snake Game -->
+                <div class="swiper-slide project-card">
+                    <h3>Classic Snake Game</h3>
+                    <p>Created a terminal-based arcade game implementing collision detection and state management logic, using custom coordinate data structures and low-latency console rendering.</p>
+                    <div class="card-tags">
+                        <span>Java</span><span>Custom DSA</span><span>CLI</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://drive.google.com/file/d/1SoSdHSqHyb0iPdckzlP1bBOxUnIYzAhE/view?usp=sharing" target="_blank" class="project-btn">
+                            <i class="fas fa-play-circle"></i> Watch Demo
+                        </a>
+                    </div>
                 </div>
-                <div class="project-links">
-                    <a href="https://drive.google.com/file/d/1SoSdHSqHyb0iPdckzlP1bBOxUnIYzAhE/view?usp=sharing" target="_blank" class="project-btn">
-                        <i class="fas fa-play-circle"></i> Watch Demo
-                    </a>
-                </div>
+
             </div>
+            <!-- Slider Controls -->
+            <div class="swiper-pagination projects-pagination"></div>
+            <div class="swiper-button-prev projects-prev"></div>
+            <div class="swiper-button-next projects-next"></div>
         </div>
     </section>
 
-    <!-- 5. Education Section -->
+    <!-- 5. Education Section (3D Coverflow Slider) -->
     <section id="education" class="education-section" data-aos="fade-up">
         <h2 class="section-title">Education</h2>
-        <div class="education-grid-multi">
-            <!-- College -->
-            <div class="education-card">
-                <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
-                <h3>B.E. Computer Science and Engineering</h3>
-                <p class="edu-place">CMS College of Engineering</p>
-                <div class="edu-score">CGPA: <span>8.21</span></div>
-                <span class="edu-year">2023 -- 2027</span>
-            </div>
+        <p class="swipe-hint"><i class="fas fa-arrows-alt-h"></i> Swipe to see educational qualifications</p>
 
-            <!-- 12th -->
-            <div class="education-card">
-                <div class="edu-icon"><i class="fas fa-school"></i></div>
-                <h3>Higher Secondary Certificate (HSC)</h3>
-                <p class="edu-place">GHSS Enusonai, State Board</p>
-                <div class="edu-score">Percentage: <span>85%</span></div>
-                <span class="edu-year">2022 -- 2023</span>
-            </div>
+        <!-- Swiper Container for Education -->
+        <div class="swiper education-swiper">
+            <div class="swiper-wrapper">
+                
+                <!-- Slide 1: College -->
+                <div class="swiper-slide education-card">
+                    <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>B.E. Computer Science and Engineering</h3>
+                    <p class="edu-place">CMS College of Engineering</p>
+                    <div class="edu-score">CGPA: <span>8.21</span></div>
+                    <span class="edu-year">2023 -- 2027</span>
+                </div>
 
-            <!-- 10th -->
-            <div class="education-card">
-                <div class="edu-icon"><i class="fas fa-book-reader"></i></div>
-                <h3>Secondary School Leaving Certificate (SSLC)</h3>
-                <p class="edu-place">GHS Ulagam, State Board</p>
-                <div class="edu-score">Percentage: <span>78%</span></div>
-                <span class="edu-year">2020 -- 2021</span>
+                <!-- Slide 2: 12th HSC -->
+                <div class="swiper-slide education-card">
+                    <div class="edu-icon"><i class="fas fa-school"></i></div>
+                    <h3>Higher Secondary Certificate (HSC)</h3>
+                    <p class="edu-place">GHSS Enusonai, State Board</p>
+                    <div class="edu-score">Percentage: <span>85%</span></div>
+                    <span class="edu-year">2022 -- 2023</span>
+                </div>
+
+                <!-- Slide 3: 10th SSLC -->
+                <div class="swiper-slide education-card">
+                    <div class="edu-icon"><i class="fas fa-book-reader"></i></div>
+                    <h3>Secondary School Leaving Certificate (SSLC)</h3>
+                    <p class="edu-place">GHS Ulagam, State Board</p>
+                    <div class="edu-score">Percentage: <span>78%</span></div>
+                    <span class="edu-year">2020 -- 2021</span>
+                </div>
+
             </div>
+            <!-- Slider Controls -->
+            <div class="swiper-pagination education-pagination"></div>
+            <div class="swiper-button-prev education-prev"></div>
+            <div class="swiper-button-next education-next"></div>
         </div>
     </section>
 
@@ -288,6 +310,9 @@
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- Swiper JS Library -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Custom JS -->
     <script src="script.js"></script>
 </body>
 </html>
