@@ -483,74 +483,95 @@ body {
 }
 
 /* =======================================================
-   Industrial Visits Section (NEW STYLES)
+   Industrial Visits Section (Glassmorphism 3-Card Grid)
    ======================================================= */
 .iv-section {
-    padding: 60px 8%;
+    padding: 100px 8% 70px !important;
+    position: relative;
+    z-index: 1;
 }
 
 .iv-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-    max-width: 1100px;
-    margin: 0 auto;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+    gap: 28px !important;
+    max-width: 1200px !important;
+    margin: 30px auto 0 !important;
 }
 
 .iv-card {
-    background: var(--card-bg);
-    padding: 30px;
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    transition: 0.4s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    background: #1e293b !important; /* தெளிவான டிலீப் கார்டு பின்னணி */
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 16px !important;
+    padding: 30px !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
 }
 
 .iv-card:hover {
-    transform: translateY(-8px);
-    border-color: var(--primary-green);
-    box-shadow: 0 12px 30px rgba(34, 139, 34, 0.25);
+    transform: translateY(-8px) !important;
+    border-color: #228b22 !important;
+    box-shadow: 0 15px 35px rgba(34, 139, 34, 0.25) !important;
 }
 
 .iv-badge {
-    display: inline-block;
-    background: rgba(34, 139, 34, 0.15);
-    color: var(--primary-green);
-    padding: 4px 12px;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    border: 1px solid rgba(34, 139, 34, 0.4);
-    margin-bottom: 12px;
-    width: fit-content;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    background: rgba(34, 139, 34, 0.18) !important;
+    color: #4ade80 !important;
+    padding: 6px 14px !important;
+    border-radius: 20px !important;
+    font-size: 0.82rem !important;
+    font-weight: 600 !important;
+    border: 1px solid rgba(34, 139, 34, 0.4) !important;
+    margin-bottom: 16px !important;
+    width: fit-content !important;
 }
 
 .iv-card h3 {
-    font-size: 1.25rem;
-    margin-bottom: 6px;
-    color: #f8fafc;
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    color: #f8fafc !important;
+    margin-bottom: 8px !important;
+    line-height: 1.4 !important;
 }
 
 .iv-location {
-    color: var(--primary-blue);
-    font-size: 0.88rem;
-    font-weight: 600;
-    margin-bottom: 12px;
-}
-
-.iv-location i {
-    margin-right: 4px;
+    color: #38bdf8 !important;
+    font-size: 0.88rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 14px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
 }
 
 .iv-desc {
-    color: #cbd5e1;
-    font-size: 0.92rem;
-    line-height: 1.6;
-    margin-bottom: 15px;
+    color: #cbd5e1 !important;
+    font-size: 0.92rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 20px !important;
 }
 
+.iv-card .card-tags {
+    margin-top: auto !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+}
+
+.iv-card .card-tags span {
+    font-size: 0.78rem !important;
+    background: rgba(0, 102, 204, 0.2) !important;
+    color: #60a5fa !important;
+    border: 1px solid rgba(96, 165, 250, 0.3) !important;
+    padding: 4px 10px !important;
+    border-radius: 6px !important;
+}
 /* Professional Interests & Strengths Section */
 .interests-section {
     padding: 60px 8%;
