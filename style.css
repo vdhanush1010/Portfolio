@@ -49,13 +49,13 @@ body {
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 18px;
+    gap: 16px;
 }
 
 .nav-links a {
     color: #cbd5e1;
     text-decoration: none;
-    font-size: 0.88rem;
+    font-size: 0.85rem;
     transition: 0.3s;
 }
 
@@ -74,7 +74,7 @@ body {
     color: var(--primary-green);
 }
 
-.swipe-hint {
+.swipe-hint, .section-subtitle {
     text-align: center;
     color: #94a3b8;
     font-size: 0.88rem;
@@ -375,13 +375,12 @@ body {
     color: var(--primary-blue);
 }
 
-/* Active Highlight for Front/Focused Card */
 .swiper-slide-active {
     border-color: var(--primary-green) !important;
     box-shadow: 0 15px 35px rgba(34, 139, 34, 0.3) !important;
 }
 
-/* Customizing Swiper Navigation Arrows */
+/* Swiper Arrows */
 .swiper-button-next, .swiper-button-prev {
     color: var(--primary-green) !important;
     width: 40px;
@@ -402,7 +401,7 @@ body {
     color: #fff !important;
 }
 
-/* Customizing Swiper Dots Pagination */
+/* Swiper Dots */
 .swiper-pagination-bullet {
     background: #64748b !important;
     opacity: 0.6;
@@ -481,6 +480,75 @@ body {
 .cert-btn:hover {
     background: var(--primary-blue);
     color: #fff;
+}
+
+/* =======================================================
+   Industrial Visits Section (NEW STYLES)
+   ======================================================= */
+.iv-section {
+    padding: 60px 8%;
+}
+
+.iv-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.iv-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.iv-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary-green);
+    box-shadow: 0 12px 30px rgba(34, 139, 34, 0.25);
+}
+
+.iv-badge {
+    display: inline-block;
+    background: rgba(34, 139, 34, 0.15);
+    color: var(--primary-green);
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid rgba(34, 139, 34, 0.4);
+    margin-bottom: 12px;
+    width: fit-content;
+}
+
+.iv-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 6px;
+    color: #f8fafc;
+}
+
+.iv-location {
+    color: var(--primary-blue);
+    font-size: 0.88rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.iv-location i {
+    margin-right: 4px;
+}
+
+.iv-desc {
+    color: #cbd5e1;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
 
 /* Professional Interests & Strengths Section */
@@ -581,6 +649,6 @@ footer {
         width: 290px !important;
     }
     .swiper-button-next, .swiper-button-prev {
-        display: none; /* Hide side arrows on small mobile to avoid blocking content */
+        display: none;
     }
 }

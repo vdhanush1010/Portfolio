@@ -14,11 +14,11 @@ document.addEventListener("DOMContentLoaded", () => {
         initialSlide: 0,
         loop: true,
         coverflowEffect: {
-            rotate: 20,       // Angle of side cards
+            rotate: 20,
             stretch: 0,
-            depth: 250,       // Pushes background cards back
+            depth: 250,
             modifier: 1,
-            slideShadows: true // Elegant dark depth shadow for background cards
+            slideShadows: true
         },
         pagination: {
             el: '.projects-pagination',
